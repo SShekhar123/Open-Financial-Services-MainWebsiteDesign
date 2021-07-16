@@ -1,0 +1,482 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background: none;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    position: relative; top: 27px; left: 120px;
+  }
+
+  .toolbar a {
+    top: 68px;
+    text-align: left;
+    font: normal normal normal 25px/34px Open Sans;
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 1;
+    margin-right: 50px;
+    position: relative;
+    top: 18px;
+    text-decoration: none;
+  }
+
+  .toolbar a:hover {
+    color: #663399;
+  } 
+
+  .toolbar button{
+    width: 118px;
+    height: 45px;
+    box-shadow: 0px 0px 20px #00000033;
+    border: 2px solid #663399;
+    border-radius: 24px;
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #663399;
+    font-weight: 600;
+    margin-left: 10px;
+    position: relative;
+    top: 18px;
+    background: none;
+  }
+
+  .toolbar button:last-child {
+    width: 166px;
+    height: 45px;
+    background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #00000033;
+    border-radius: 24px;
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin: 0px 132px 0px 24px;
+    position: relative;
+    top: 18px;
+  }
+
+  .toolbar button:hover {
+    background: #663399;
+    color: #FFFFFF;
+  }
+
+  .calculator {
+    top: 270px;
+    left: 1100px;
+    height: 675px;
+    width: 464px;
+    background: #ffffff;
+    position: absolute;
+    z-index: -9;
+    border-radius: 24px;
+    box-shadow: 0px 0px 30px #2321321f;
+  }
+
+  .calculator h3 {
+    text-align: center;
+    font-size: 22px;
+    font-family: OpenSans, Open Sans;
+    padding: 20px;
+    width: 89%;
+    float: right;
+    background: #dcdada33;
+    margin: 0;
+    opacity: 1;
+  }
+
+  .calculator div {
+    position: relative;
+    top: 45px;
+    left: 50px;
+    width: 80%;
+    margin: 0;
+  }
+
+  .calculator div span:first-of-type {
+    font-family: Montserrat-Regular, Montserrat;
+    color: black;
+    font-size: large;
+    padding: 10px 0px;
+  }
+
+  .calculator div input:first-of-type {
+    border: none;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-size: xx-large;
+    padding: 5px 0px;
+  }
+
+  .calculator div input:last-of-type {
+    width: 100%;
+  }
+
+  .calculator div .endval {
+    float: right;
+  }
+
+  .calculator div:nth-of-type(2) {
+    top: 90px;
+  }
+
+  .calculator div:nth-of-type(3) {
+    top: 130px;
+  }
+
+  .calculator div:nth-of-type(3) input {
+    border-bottom: 4px solid;
+    color: black;
+    margin-top: 8px;
+    padding: 0px;
+  }
+
+  .calculator div:nth-of-type(4) {
+    top: 170px;
+  }
+
+  .calculator div:nth-of-type(5) {
+    top: 200px;
+  }
+
+  .calculator div:nth-of-type(5) input {
+    padding: 0px;
+    border-bottom: 4px solid;
+    margin-top: 8px;
+  }
+
+  .calculator-display {
+    height: 472px;
+    width: 220px;
+    background: transparent linear-gradient(90deg , #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+    left: 1572px;
+    top: 371.5px;
+    position: absolute;
+    border-radius: 0px 24px 24px 0px;
+    z-index: -9;
+  }
+
+  .calculator-display div {
+    display: grid;
+    color: white;
+    position: relative;
+    top: 120px;
+  }
+
+  .calculator-display div span {
+    justify-self: center;
+  }
+
+  .calculator-display div span:nth-of-type(odd) {
+    font-size: large;
+    color: #cab4e6;
+  }
+
+  .calculator-display div span:nth-of-type(even) {
+    font-size: xx-large;
+    margin-bottom: 25px;
+  }
+
+  .calculator-display button {
+    justify-self: center;
+    width: 166px;
+    height: 45px;
+    background: transparent linear-gradient(90deg, #ffffff 0%, #ffffff 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #00000033;
+    border-radius: 24px;
+    border: none;
+    opacity: 1;
+    color: #663399;
+  }
+
+  .content {
+    display: flex;
+    margin: 200px auto 83px;
+    max-width: 1930px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content .blob-small {
+    position: absolute;
+    left: -179px;
+    top: 213px;
+    z-index: -10;
+  }
+
+  .content .blob-large {
+    position: absolute;
+    right: 0px;
+    top: -227px;
+    z-index: -10;
+  }
+
+  .content .slim {
+    position: absolute;
+    top: 270px;
+    left: 189px;
+    width: 407px;
+    height: 98px;
+    opacity: 1;
+    z-index: -5;
+  }
+
+  .content hr {
+    top: 376px;
+    left: 192px;
+    width: 236px;
+    height: 8px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    opacity: 0.7;
+    position: absolute;
+    margin: 0px;
+    z-index: -5;
+  }
+
+  .content .collect {
+    top: 466px;
+    left: 136px;
+    width: 652px;
+    height: 365px;
+    background: transparent url(../assets/collect_img-video.png) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+    z-index: -5;
+  }
+
+  .content .rect-dots {
+    top: 796px;
+    left: 462px;
+    width: 430px;
+    height: 70px;
+    opacity: 0.5;
+    position: absolute;
+  }
+
+  .content .d-card {
+    top: 1137px;
+    left: 191px;
+    width: 391px;
+    height: 253px;
+    box-shadow: 0px 0px 30px #2321321F;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    opacity: 1;
+    position: absolute;
+    display: grid;
+    border: none;
+  }
+
+  .content .d-card img:first-child {
+    position: absolute;
+    top: -45px;
+    right: -45px;
+    z-index: -9;
+  }
+
+  .content .d-card img:nth-child(2) {
+    opacity: 1;
+    position: relative;
+    top: 34px;
+    left: 34px;
+    z-index: -5;
+  }
+
+  .content .d-card .head {
+    font-family: Montserrat-SemiBold;
+    font-size: 18px;
+    height: 19px;
+    width: 323px;
+    left: 34px;
+    top: 18px;
+    position: relative;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  .content .d-card .line {
+    font-family: Montserrat-Regular;
+    height: 38px;
+    font-size: 18px;
+    width: 323px;
+    left: 34px;
+    top: -5px;
+    position: relative;
+    color: #999999;
+    font-weight: 100;
+  }
+
+  .content div:nth-of-type(2){
+    top: 1450px;
+    height: 276px;
+  }
+
+  .content div:nth-of-type(3){
+    top: 1786px;
+    height: 276px;
+  }
+
+  .content div:nth-of-type(4){
+    top: 1261px;
+    left: 630px;
+    height: 272px;
+  }
+
+  .content div:nth-of-type(5){
+    top: 1593px;
+    left: 630px;
+  }
+
+  .content div:nth-of-type(4) .line {
+    color: white;
+    font-weight: 500;
+  }
+
+  .content div:nth-of-type(4) .head {
+    color: white;
+    font-weight: bolder;
+  }
+
+  .content .boost {
+    position: absolute;
+    left: 1158px;
+    top: 1377px;
+  }
+
+  .content .line3 {
+    position: absolute;
+    left: 1158px;
+    top: 1528px;
+  }
+
+  .content .boost-info {
+    position: absolute;
+    left: 1158px;
+    top: 1561px;
+  }
+
+  .content .open-account {
+    top: 1686px;
+    left: 1158px;
+    width: 279px;
+    height: 58px;
+    box-shadow: 0px 0px 20px #00000033;
+    border: 2px solid #663399;
+    border-radius: 24px;
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #663399;
+    opacity: 1;
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    position: absolute;
+  }
+
+  .content .wave {
+    position: absolute;
+    top: 1208px;
+    z-index: -10;
+    width: 100%;
+  }
+  
+  .content .open-account:hover {
+    background: #663399;
+    color: #FFFFFF;
+  }
+
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    float: right;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #663399;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

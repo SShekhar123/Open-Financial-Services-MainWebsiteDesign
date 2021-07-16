@@ -1,0 +1,120 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    alt="Angular Logo"
+    src="../assets/logo.png"
+  />
+    <div class="spacer"></div>
+    <a aria-label="Products" target="_blank" rel="noopener" href="#" title="Products">
+      Products
+    </a>
+    <a aria-label="Solutions" target="_blank" rel="noopener" href="#" title="Solutions">
+      Solutions
+    </a>
+    <a aria-label="Pricing" target="_blank" rel="noopener" href="#" title="Pricing">
+      Pricing
+    </a>
+    <button>Login</button>
+    <button>Get Started</button>
+</div>
+<div class="calculator">
+  <h3>Eligibility Calculator</h3>
+  <div>
+    <span>Monthly Income</span><br>
+    <input type="text" id="textInput" value="₹ 1,50,000"><br>
+    <input type="range" name="rangeInput" min="100000" max="300000">
+    <span>₹ 1,00,000</span> <span class="endval">₹ 3,00,000</span>
+  </div>
+  <div>
+    <span>Monthly Expense</span><br>
+    <input type="text" id="textInput" value="₹ 50,000"><br>
+    <input type="range" name="rangeInput" min="10000" max="100000">
+  </div>
+  <div>
+    <span>Repayment Tenure</span><br>
+    <input type="text" list="providers" placeholder="6 Months">
+    <datalist id="providers">
+      <option>1 Year</option>
+      <option>2 Years</option>
+    </datalist>
+  </div>
+  <div>
+    <span>Do you have any existing loans?</span>
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <div>
+    <span>EMI of existing loan (optional)</span><br>
+    <input type="text" placeholder="₹ 15,000">
+  </div>
+</div>
+<div class="calculator-display">
+  <div>
+    <span> Amount </span>
+    <span>₹ 1,00,000 </span>
+    <span>Your EMI will be </span>
+    <span> ₹ 15,000 </span>
+    <button>GET MONEY</button>
+  </div>
+</div>
+<div class="content" role="main">
+  
+  <img class="blob-small" src="../assets/blob-small.svg" alt="blob small" />
+  <img class="blob-large" src="../assets/circle.svg" alt="blob small" />
+  <img class="slim" src="../assets/We make it Super Sim.svg" alt="slim" /><hr>
+  <img class="collect" src="../assets/collect_img-video.png" alt="collect" />
+  <img class="rect-dots" src="../assets/accounting_dots.svg" alt="rectangle dots" />
+
+  <div class="d-card">
+    <img src="../assets/rectangle23.svg" alt="rectangle" />
+    <img src="../assets/Get Paid Instantly.png" />
+    <div class="head">Quick cash disbursement</div>
+    <div class="line">Get terms loans that your business needs within 72 hrs</div>
+  </div>
+
+  <div class="d-card">
+    <img src="../assets/Rectangle Copy 19.svg" alt="rectangle" />
+    <img src="../assets/Low interest rate.png" />
+    <div class="head">Low-interest rate</div>
+    <div class="line">Achieve your financial goals with an amazing interest rate starting at 13% per annum</div>
+  </div>
+
+  <div class="d-card">
+    <img src="../assets/Rectangle Copy 19.svg" alt="rectangle" />
+    <img src="../assets/Secure Payments.png" />
+    <div class="head">Zero Paperwork</div>
+    <div class="line">Get started instantly by submitting only your basic details & bank statements</div>
+  </div>
+
+  <div class="d-card">
+    <img src="../assets/Rectangle 2.svg" alt="rectangle" />
+    <img src="../assets/freelancer_feature_icon_6@1.5x.png" />
+    <div class="head">Ace your business finances</div>
+    <div class="line">Manage banking, accounting & everything in between, on one platform</div>
+  </div>
+
+  <div class="d-card">
+    <img src="../assets/rectangle23.svg" alt="rectangle" />
+    <img src="../assets/Covid.png" />
+    <div class="head">Loans to fight COVID-19</div>
+    <div class="line">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</div>
+  </div>
+
+  <img class="boost" src="../assets/Boost your business.svg" alt="boost your business" />
+  <img class="line3" src="../assets/Line 3.svg" alt="line" />
+  <img class="boost-info" src="../assets/Get your hands on a.svg" alt="Get your hands on" />
+  <button class="open-account"> Get an Open Account </button>
+  <img class="wave" src="../assets/sol_wave_bg.svg" alt="wave" />
+</div>
+
+<router-outlet></router-outlet>
